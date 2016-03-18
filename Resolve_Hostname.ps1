@@ -2,7 +2,7 @@
 $array = $null
 $array = @()
 
-Foreach ($Server in $ServerList) {
+foreach ($Server in $ServerList) {
     $Address = [System.Net.Dns]::GetHostAddresses($Server.Name)
 	$obj = New-Object PSObject
 		$obj | Add-Member -MemberType NoteProperty -Name "Computer Name" -Value $Server.Name
